@@ -154,6 +154,24 @@ Shortcut for comments: ctrl + /
 
 ->Comments can also can be used for testing
 
+Chapter-5 (Inheritence)
+
+For suppose if we give property to a div, the div actually donot contains text. It contains <h> or <p> 
+which contains text. The properties are applied to them. This is due to inheritence. It inherits properties 
+of parents.
+
+To make it not inherit use p{color: initial }
+
+**** Note: All the properties are not inherited. Example border property. 
+div{
+    border: 1px solid black;
+}
+
+To make it inherit p{border: inherit}
+
+**** The properties which donot make any sense are not inherited. Some are inherited.
+
+
 
 
 

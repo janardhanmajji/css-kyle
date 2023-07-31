@@ -1,0 +1,15 @@
+h1, footer{
+    background-color: purple;
+    color: white;
+    text-align: center;
+}
+
+
+
+div{
+    color: gray;
+}
+
+.d{
+    font-style: italic;
+}

@@ -1,0 +1,20 @@
+h1{
+    text-align: center;
+}
+
+.f{
+    background-color: green;
+    color: white;
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.l1{
+    color: aqua;
+}
+
+.l2{
+    text-decoration:line-through;
+}
