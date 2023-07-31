@@ -1,0 +1,161 @@
+Chapter-1
+
+-> CSS stands for cascading style sheet.
+-> HTML is for content of the website (information)
+-> In order to make our website look better we need CSS
+
+-> It helps for styling our websites (make them look good).
+
+Chapter-2 (Basic Syntax)
+
+Syntax:
+
+ selector{
+    property: value1;
+    property: value2;
+}
+
+Types of selectors:
+
+1) HTML element selector: Selects every single element of that type inside our HTML document and applies
+ the properties.
+Ex:- div{
+    color: green;
+}
+
+2) Class selectors: Selects every single element that has class-name of that specific name and applies
+ the properties.
+Ex:- 
+
+HTML: 
+<div class="first"> <p>My name is Janardhan</p> </div>
+
+CSS:
+
+.first{
+    color: blue;
+}
+
+This is the most popular way of selecting elements for CSS
+We almost always use Class selectors
+
+3) Id selector: In a HTML page ID is unique which means if a HTML page contains an ID name it must not be
+ repeated. It also selects the element with that specific id and applies the properties to it.
+
+HTML: 
+<div class="first"> <p id="name">My name is Janardhan</p> </div>
+
+CSS:
+
+.first{
+    color: blue;
+}
+
+#name{
+    background-color: blue;
+}
+
+4) Everything selector:  It selects each and every element on the page and applies the properties given.
+
+Syntax:
+
+*{
+    font-size: small;
+}
+
+***** We mostly use class selectors.
+
+5) Custom selector: Combination of selectors.
+
+Ex:-
+
+If we use .class1{} it will consider all classes with name class1 and applies the properties.
+But what if we want to select only the class1 present in p1, then we use
+
+p1.class1{}
+
+Similarly we want id2 present in class1 which is in div1 we use,
+div1.class1#id2{}
+
+We can combine like this to make our unique selector.
+
+****Note :  To use the same properties to multiple selectors i.e, similar to or we must use comma operator.
+ (Avoid duplication of code)
+Ex:-  div.class1, span{} applies even if class1 is in div or if it is a span.
+
+**** Selecting child tags
+
+Ex:-
+
+<div>
+    <h3>Janardhan</h3>
+    <h3>Likitha</h3>
+<div>
+
+We need to select all h3 present in div ----> we use space.
+Syntax:
+
+div h3{
+    color : red ;
+}
+
+Chapter-3  (Ways to add CSS to a webpage)
+
+ In order of worst to best---
+
+ 1) Inline style:
+
+ Every single HTML tag has an inline attribute.
+ <div style="color: green">Janardhan</div>
+
+ Donot use inline styles........
+
+ 2) Writing style in the same HTML page in the head tag -- by using style tag.
+
+ It works but the problem is there would be multiple HTML pages in our project but this type of CSS only 
+ applicable to a single page. If we want to apply same style in other pages we need to use same code which
+  leads to --- code duplication.
+
+ Ex:-
+
+ <head>
+    <style>
+        /*CSS code goes here*/
+    </style>
+</head>
+
+3) Using an external style sheet:
+
+create a file style.css and write all the CSS code.
+Link that stylesheet with your html document as shown below-
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- other meta data -->
+<!-- link to our css file-->
+<link rel="stylesheet" href="./path/to/your_file/style.css">
+</head>
+
+
+The link tag can link many files. To say that it is a CSS file specify rel="stylesheet"
+Benifit of external style sheet is we can apply the same styles to any number of HTML pages simultaneously.
+
+Chapter-4 (Comments)
+
+Comments in css starts with /* and ends with */
+
+Ex:- /* This style below is for 2nd paragraph*/
+
+Used to explain what the code is doing. We can also comment the properties which can be ignored for now 
+and when needed the comments can be removed.
+
+Shortcut for comments: ctrl + /
+
+->Comments can also can be used for testing
+
+
+
+
+
+
