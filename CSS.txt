@@ -171,6 +171,109 @@ To make it inherit p{border: inherit}
 
 **** The properties which donot make any sense are not inherited. Some are inherited.
 
+Chapter-9 (Colors)
+
+-> We can use color names, hex codes, rgb, rgba, hsl, hsla
+
+
+Types of colurs:
+
+1) rgb --> p{background-color: rgb(10,10,20)}  ==> red, green, blue
+
+rgb(0,0,0) ==> black
+rgb(255,255,255) ==> white
+rgb(255,255,0) => yellow
+rgb(255,0,0) ==> red
+rgb(0,255,0) ==> green
+rgb(0,0,255) ==> blue
+rgb(0,255,255) == magenta
+rgb(255,0,255) ==> cyan
+
+2) Hexadecimal notation:
+
+p{background-color: #ff0000} ==> red
+p{background-color: #00ff00} ==> green
+p{background-color: #0000ff} ==> blue
+p{background-color: #ffff00} ==> yellow
+p{background-color: #ff00ff} ==> magenta
+p{background-color: #00ffff} ==> cyan
+p{background-color: #000000} ==> black
+p{background-color: #ffffff} ==> white
+
+ff => 255
+00 => 0
+
+Shorthand for #ff0000 => #f00 
+
+3) rgba version: 
+
+p{background-color: rgba(255,0,0,0.5)} ==> red with 50% opacity
+
+4) hsl version:
+
+p{background-color: hsl(0,100%,50%)} ==> red
+
+s stands for saturation
+l stands for lightness
+h is the hue (in degrees). The range of values goes from 0 to 36
+
+
+*** hcl is useful when we need same colour with different brightness
+
+5) hsla version:
+
+p{background-color: hsla(0,100%,50%,0.5)} ==> red with 50% opacity
+
+
+*********************************************************************************************************
+
+Chapter-10 (Specificity)
+
+The most important topic in css..........
+
+CSS stands for cascading style sheet. Here cascading means inherent hierarchy.
+In CSS there are various rules that can be applied on a webpage and they have their own importance level
+
+1) CSS always reads from top to bottom i.e., the rules at bottom always overrides the rules on top (if
+they are of the same level)
+
+Ex:- stylesheet1
+     stylesheet2
+
+Always properties in stylesheet2 are given more preference than stylesheet1.
+
+Ex:- h2{color: green}
+     h2{color: blue}
+
+color blue is applied for h2
+
+2) If they are of different level depends upon the specificity.
+
+Example: id are more specific than class. class are more specific than elements.
+
+****The specificity is calculated by  /* a,b, c, d */
+
+where   a represents important which is represented by important keyword. (color: blue !important)
+        b represents id-selector
+        c represents class-selector
+        d represents element-selector
+        if all these selectors not present then it will consider as zero selector
+        Example : p#myid { color:#ffcc33; }
+                    a = 0, b = 1, c = 0, d = 1
+                    specificity = 0,1,0,1
+
+
+3) anything in the inline css overrides stylesheet unless it has the important keyword.
+
+4) Never use important keyword.
+
+
+
+
+
+
+
+
 
 
 
